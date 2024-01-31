@@ -27,3 +27,287 @@
 
 }
 
+
+/* RESET DEFAULTS */
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    background-color: var(--clr-Very-Dark-Blue);
+}
+
+/* CARD */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    padding: 24px 28px;
+    border-radius: 25px;
+    background-color: hsl(215.29deg 25.37% 13.14%);
+}
+
+/* card-info */
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.card-info_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--clr-Dark-Blue);
+    margin-bottom: 10px;
+}
+
+.card-info_img img {
+    width: 14px;
+}
+
+.card-info_title {
+    font-size: 24px;
+    font-weight: var(--fw-bold);
+    color: var(--clr-White);
+}
+
+.card-info_subtitle {
+    font-size: var(--fs);
+    font-weight: var(--fw-regular);
+    color: var(--clr-Light-Grey);
+}
+
+/* card-rating */
+
+.card-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.card-rating_num {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--clr-Dark-Blue);
+}
+.card-rating_num:hover {
+    background-color: var(--clr-Medium-Grey);
+}
+.card-rating_num:active {
+    background-color: var(--clr-Orange);
+}
+
+.card-rating_num:hover .text {
+    color: var(--clr-White);
+}
+
+.card-rating_num .text {
+    font-size: var(--fs);
+    font-weight: var(--fw-bold);
+    color: var(--clr-Medium-Grey);
+}
+
+
+/* btn */
+
+.btn {
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-size: var(--fs);
+    font-weight: var(--fw-bold);
+    padding: 10px 16px;
+    color: var(--clr-White);
+    border-radius: 50px;
+    background-color: var(--clr-Orange);
+}
+
+.btn:hover {
+    color: var(--clr-Orange);
+    background-color: var(--clr-White);
+}
+
+
+
+/* Media query  */
+
+@media (max-width: 760px) {
+    
+    .card {
+        padding: 26px 24px;
+    }
+
+    .card-info_img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: var(--clr-Dark-Blue);
+        margin-bottom: 6px;
+    }
+
+    .card-info {
+        gap: 14px;
+        margin-bottom: 20px;
+    }
+    
+    .card-info_title {
+        font-size: 22px;
+    }
+    
+    .card-info_subtitle {
+        font-size: 14px;
+    }
+    
+    .card-rating {
+        gap: 6px;
+        margin-bottom: 22px;
+    }
+
+    .card-rating_num {
+        width: 44px;
+        height: 44px;
+    }
+
+    .card-rating_num .text {
+        font-size: 13px;
+    }
+
+    .btn {
+        font-size: 13px;
+        padding: 12px 16px;
+    }
+    
+
+}
+
+
+
+/* ---------- Thank you card ---------- */
+
+.thank-card {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    padding: 44px 28px;
+    border-radius: 25px;
+    background-color: hsl(215.29deg 25.37% 13.14%);
+}
+
+.thank-card_img {
+    margin: auto;
+    margin-bottom: 24px;
+}
+
+
+.card-select {
+    margin: auto;
+    background-color: var(--clr-Dark-Blue);
+    border-radius: 50px;
+    padding: 6px 18px;
+}
+
+.card-select_text {
+    font-size: var(--fs);
+    font-weight: var(--fw-regular);
+    color: var(--clr-Orange);
+}
+
+
+.thank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.thank-title {
+    font-size: 24px;
+    font-weight: var(--fw-bold);
+    color: var(--clr-White);
+}
+
+.thank-text {
+    font-size: 14px;
+    font-weight: var(--fw-regular);
+    word-spacing: 1px;
+    text-align: center;
+    color: var(--clr-Light-Grey);
+}
+
+/* Media query for thank  */
+
+@media (max-width: 760px) {
+    
+    .thank-card {
+        padding: 32px 20px;
+    }
+
+    .thank-card_img {
+        margin-bottom: 16px;
+    }
+
+    .card-select {
+        background-color: var(--clr-Dark-Blue);
+        padding: 6px 16px;
+    }
+
+    .card-select_text {
+        font-size: 13px;
+    }
+    
+    .thank {
+        margin-top: 24px;
+    }
+
+    .thank-title {
+        font-size: 22px;
+    }
+    
+    .thank-text {
+        font-size: 13px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
