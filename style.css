@@ -48,6 +48,7 @@ body {
     align-items: center;
     padding: 0 20px;
     background-color: var(--clr-Very-Dark-Blue);
+    transition: all 0.3s;
 }
 
 /* CARD */
@@ -120,11 +121,15 @@ body {
 .card-rating_num:hover {
     background-color: var(--clr-Medium-Grey);
 }
-.card-rating_num:active {
+.card-rating_num.active {
     background-color: var(--clr-Orange);
 }
 
 .card-rating_num:hover .text {
+    color: var(--clr-White);
+}
+
+.card-rating_num .text.active {
     color: var(--clr-White);
 }
 
@@ -213,6 +218,10 @@ body {
 
 
 /* ---------- Thank you card ---------- */
+
+.hide {
+    display: none !important;
+}
 
 .thank-card {
     display: flex;
